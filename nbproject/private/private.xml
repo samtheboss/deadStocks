@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/stocks/LazyDataLoaderTask.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/stocks/DeadStocks.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/BackgroundRemover.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/ExcelExporter.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/ImportExcelController.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/stocks/DeadstockFxmlController.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/importExcel.fxml</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/stocks/ProgressDialog.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/MoveImagesFX.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/ExcelImport.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/stocks/deadstockFxml.fxml</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/dbConnection.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/ExcelToTable.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/RowData.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/stocks/deadStoockModel.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/stocks/location.java</file>
+            <file>file:/D:/CalculatorV2/deadStocks/src/deadstocks/stocks/progressBar.fxml</file>
+        </group>
+    </open-files>
+</project-private>

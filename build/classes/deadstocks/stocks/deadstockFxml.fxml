@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="506.0" prefWidth="1145.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="deadstocks.stocks.DeadstockFxmlController">
+   <children>
+      <VBox layoutX="22.0" layoutY="63.0" prefHeight="39.0" prefWidth="916.0">
+         <children>
+            <JFXTextField fx:id="TXT_FILTER" prefHeight="27.0" prefWidth="707.0" promptText="FILTER" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </JFXTextField>
+         </children>
+      </VBox>
+      <VBox layoutX="22.0" layoutY="107.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="107.0">
+         <children>
+            <TableView fx:id="tbl_deadStock" prefHeight="328.0" prefWidth="1121.0" VBox.vgrow="ALWAYS">
+              <columns>
+                  <TableColumn prefWidth="75.0" text="ITEM DETAILS">
+                     <columns>
+                        <TableColumn fx:id="COL_SUPPLIER_NAME" prefWidth="163.0" text="SUPPLIER NAME" />
+                      <TableColumn fx:id="COL_ITEM_CODE" prefWidth="75.0" text="ITEM_CODE" />
+                      <TableColumn fx:id="COL_ITEM_NAME" prefWidth="320.0" text="ITEM_NAME" />
+                        <TableColumn fx:id="COL_SUOM" prefWidth="56.0" text="SUOM" />
+                        <TableColumn fx:id="COL_ITEM_LOCATION" prefWidth="151.33331298828125" text="ITEM LOCATION" />
+                        <TableColumn fx:id="COL_QTY" minWidth="0.0" prefWidth="100.0" text="CLOSING STOCK" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="TRANSACTION QTY">
+                     <columns>
+                        <TableColumn fx:id="COL_SALE_QTY" prefWidth="88.33331298828125" text="SALES QTY" />
+                        <TableColumn fx:id="COL_PURCHASE_QRY" prefWidth="106.33331298828125" text="PURCHASE QTY" />
+                        <TableColumn fx:id="COL_LAST_SALE_DATE" prefWidth="88.33331298828125" text="trn date" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="STOCK COST">
+                     <columns>
+                        <TableColumn fx:id="COL_AVG_PRICE" minWidth="0.0" prefWidth="100.0" text="AVG PRICE" />
+                        <TableColumn fx:id="COL_STOCK_PRICE" minWidth="0.0" prefWidth="100.0" text="STOCK VALUE" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="PURCHASE COST">
+                     <columns>
+                        <TableColumn fx:id="COL_BUY_PRICE" minWidth="0.0" prefWidth="100.0" text="BUY PRICE" />
+                        <TableColumn fx:id="COL_PURCHASES_VALUE" minWidth="0.0" prefWidth="100.0" text="PURCHASES VALUE" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="75.0" text="REALIZABLE INCOME">
+                     <columns>
+                        <TableColumn fx:id="COL_SALES_PRICE" minWidth="0.0" prefWidth="100.0" text="SALE PRICE" />
+                        <TableColumn fx:id="COL_SALE_VALUE" minWidth="0.0" prefWidth="100.0" text="SALE VALUE" />
+                     </columns>
+                  </TableColumn>
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="734.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="148.0" text="Purchase Value" textFill="#163f82">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtamaount" prefHeight="27.0" prefWidth="124.0" text="9000000" textFill="#163f82">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="98.0" text="Sales Value" textFill="#163f82">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbsaleValue" layoutX="110.0" layoutY="10.0" prefHeight="27.0" prefWidth="143.0" text="90000000" textFill="#163f82">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="117.0" text="Stock Value" textFill="#163f82">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbstockvalue" layoutX="127.0" layoutY="10.0" prefHeight="27.0" prefWidth="179.0" text="90000000" textFill="#163f82">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="27.0" prefWidth="1124.0" spacing="5.0">
+         <children>
+            <Label prefHeight="74.0" prefWidth="87.0" text="Number of Days" />
+            <RadioButton fx:id="rd30days" minWidth="4.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="63.0" text="30 Days">
+               <toggleGroup>
+                  <ToggleGroup fx:id="ptions" />
+               </toggleGroup>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="rd60days" minWidth="41.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="63.0" text="60 Days" toggleGroup="$ptions">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="rd90days" mnemonicParsing="false" prefHeight="51.0" prefWidth="63.0" selected="true" text="90 Days" toggleGroup="$ptions">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="rd120days" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" text="120 Days" toggleGroup="$ptions">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="rdcustom" minWidth="51.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="62.0" text="Custom" toggleGroup="$ptions" />
+            <TextField fx:id="TTX_NUMBER_DAYS" prefHeight="25.0" prefWidth="145.0" promptText="Custom Number of days ">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </TextField>
+            <ComboBox fx:id="CMB_LOCATION" prefHeight="25.0" prefWidth="155.0" promptText="ALL" />
+            <Button fx:id="BTN_LOAD_DATA" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Load Data" />
+            <Button fx:id="BTN_PRINT" mnemonicParsing="false" prefHeight="25.0" prefWidth="78.0" text="Print" />
+            <Button fx:id="BTN_EXPORT" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Export To Excel" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+</AnchorPane>
